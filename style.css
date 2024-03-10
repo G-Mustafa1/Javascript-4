@@ -1,0 +1,104 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+
+body {
+   /* background: blue; */
+   background: #e2e1e0;
+   display: flex;
+   gap: 40px;
+   height: 100vh;
+   align-items: center;
+   justify-content: space-evenly;
+   list-style-position: inside;
+   overflow: hidden;
+   /* flex-direction: column; */
+}
+
+.card {
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+   border: 2px solid whitesmoke;
+   width: 300px;
+   height: 300px;
+   overflow: hidden;
+   padding: 10px 15px 10px 15px;
+   /* background-color: rebeccapurple; */
+   background-color: #fff;
+   /* color: #fff; */
+   /* border: 10px solid rgb(51, 51, 51); */
+   border-radius: 10px;
+   flex-direction: column;
+
+   h1 {
+       margin-bottom: 50px;
+       font-family: brush script MT;
+       transform: translateY(80px);
+       font-size: 42px;
+       transition: 1s;
+       text-align: center;
+   }
+
+   li {
+       transform: translateY(150px);
+       transition: 1s;
+       margin-bottom: 5px;
+       font-family: monotype corsiva;
+   }
+
+}
+
+.card:hover {
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   /* transform: scale(1.1); */
+
+   h1 {
+       margin: 0%;
+       transform: translateY(0px);
+       font-size: 28px;
+   }
+
+   li {
+       transform: translateY(40px);
+       font-size: 20px;
+       /* font-weight: 500; */
+   }
+
+}
+
+.card:nth-child(1):hover {
+   overflow-y: scroll;
+   padding-bottom: 30px;
+   scroll-behavior: smooth;
+
+   li {
+       margin-bottom: 20px;
+   }
+}
+h1{
+   color: orange;
+}
+.card:nth-child(1)::-webkit-scrollbar {
+   width: 10px;
+}
+
+.card:nth-child(1)::-webkit-scrollbar-track {
+   border-radius: 4px;
+   background-color: transparent;
+}
+
+.card:nth-child(1)::-webkit-scrollbar-thumb {
+   background: linear-gradient(to top, #104cda, #40c4a9, #10413a);
+   border-radius: 5px;
+}
+@media only screen and (max-width: 1000px ){
+   body{
+      flex-direction: column;
+      /* color: blue; */
+   }
+   h1{
+      color: orangered;
+   }
+}
